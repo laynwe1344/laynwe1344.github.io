@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            fieldset{
+                width: 800px;
+                height: 600px;
+                background-color: hotpink;
+            }
+            input{
+                border-radius: 20px;
+                padding: 10px 10px 10px 10px;
+                margin-left: 20%;
+            }
+            #btn{
+                border-radius: 30px;
+                padding: 10px 10px 10px 10px;
+               
+            }
+            span{
+                border: 1px solid black;
+                padding:10px ;
+                background-color: white;
+                display: inline-block;
+                width: 20px;
+                height: 5px;
+                margin: 5px;
+                
+            }
+            div{
+                margin-left: 20%;
+            }
+            h1{
+                margin-left: 20%;
+            }
+        </style>
+    </head>
+    <body onload="formFun(event)">
+        <fieldset>
+            <h1>Moving Color2</h1>
+            <div id="myDiv"></div>
+            </br>
+            <input type="text" id="userinput"/>
+            <button id="btn" onclick="doProcess(event)">Process</button>
+        </fieldset>
+        <script type="text/javascript">
+            function formFun(event){
+                event.preventDefault();
+                var c,r;
+                var y = 1;
+                for(c = 1 ; c <= 11 ; c++){
+                    for(r = 1 ; r <= 11 ;r++){
+                        var sp = document.createElement("span");
+                        sp.setAttribute("id",y);
+                        var node = document.getElementById("myDiv");
+                        node.appendChild(sp);
+                        console.log(sp);
+                        y++;
+                    }
+                    var brr1 = document.createElement("br");
+                    brr1.setAttribute("clear","both");
+                    node.appendChild(brr1);
+                    node.appendChild(brr1);
+                }
+            }
+
+            function doProcess(event){
+                event.preventDefault();
+                var userIn = parseInt(document.getElementById("userinput").value);
+                if(userIn == 0){
+                    alert("Input is invalid!!")
+                }
+                //for green
+                var a = 6;
+                greenCount = 20;
+
+                //for yellow
+                var b = 28;
+                yellowCount = 12;
+
+                //for red
+                var c = 50;
+                redCount = 4;
+
+                //delaytime
+                var greenWait = setTimeout(greenDelay,500);
+                var yellowWait = setTimeout(yellowDelay,1000);
+                var redWait = setTimeout(redDelay,1500);
+                var greenTime,yellowTime,redTime;
+                function greenDelay(){
+                    greenTime = setInterval(greenFun,500);
+                }
+                function yellowDelay(){
+                    yellowCount = 12;
+                    yellowTime = setInterval(yellowFun,500);
+                }
+                function redDelay(){
+                    redCount = 4;
+                    redTime = setInterval(redFun,500);
+                }
+
+                //Clear Color
+                var arrayColor = [];
+                for(var i = 0; i < arrayColor.length ; i ++){
+                    document.getElementById(arrayColor[i]).style.backgroundColor = "white";
+                }
+
+                //green Function
+                function greenFun(){
+                    if(greenCount == 0){
+                        greenCount = 20;
+                        userIn --;
+
+                        for(var i = 0; i < arrayColor.length ; i ++){
+                            document.getElementById(arrayColor[i]).style.backgroundColor = "white";
+                        }
+                        a = 6;
+                        b = 28;
+                        c = 50;
+
+                        if (userIn == 0){
+                            clearInterval(greenTime);
+                            clearInterval(yellowTime);
+                            clearInterval(redTime);
+                        }else {
+                            var yellowWaitAgain = setTimeout(yellowDelay,500);
+                            var redWaitAgain = setTimeout(redDelay, 500);
+                        }
+                    }
+                    else {
+                        if(a == 6){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a + 12;
+                        }else if (a == 18){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a + 12;
+                        }else if(a == 30){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a + 12;
+                        }else if (a == 42){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a + 12;
+                        }else if (a == 54){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a + 12;
+                        }else if (a == 66){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a + 10;
+                        }else if (a == 76){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a + 10;
+                        }else if(a == 86){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a + 10;
+                        }else if(a == 96){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a + 10;
+                        }else if(a == 106){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a + 10;
+                        }else if(a == 116){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a - 12;
+                        }else if(a == 104){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a -12;
+                        }else if(a == 92){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a -12;
+                        }else if(a == 80){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a -12;
+                        }else if(a == 68){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a -12;
+                        }else if(a == 56){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a - 10;
+                        }else if(a == 46){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a - 10;
+                        }else if (a == 36){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a -10;
+                        }else if(a == 26){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a -10;
+                        }else if(a == 16){
+                            document.getElementById(a).style.backgroundColor = "green";
+                            arrayColor.push(a);
+                            a = a - 10;
+                        }
+                        greenCount -- ;
+                    }
+                }
+
+                //yellow Function
+                function yellowFun(){
+                    if(yellowCount == 0){
+                        clearInterval(yellowTime);
+                    }
+                    else {
+                        if(b == 28){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b + 12;
+                        }else if(b == 40){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b + 12;
+                        }else if(b == 52){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b + 12;
+                        }else if(b == 64){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b + 10;
+                        }else if(b == 74){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b + 10;
+                        }else if(b == 84){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b + 10;
+                        }else if(b == 94){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b - 12;
+                        }else if(b == 82){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b - 12;
+                        }else if(b == 70){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b - 12;
+                        }else if(b == 58){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b - 10;
+                        }else if(b == 48){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b - 10;
+                        }else if(b == 38){
+                            document.getElementById(b).style.backgroundColor = "yellow";
+                            arrayColor.push(b);
+                            b = b - 10;
+                        }
+                        yellowCount --;
+                        
+                    }
+                }
+
+                //red Function
+                function redFun(){
+                    if(redCount == 0){
+                        clearInterval(redTime);
+                    }
+                    else{
+                        if(c == 50){
+                            document.getElementById(c).style.backgroundColor = "red";
+                            arrayColor.push(c);
+                            c = c + 12;
+                        }else if(c == 62){
+                            document.getElementById(c).style.backgroundColor = "red";
+                            arrayColor.push(c);
+                            c = c + 10;
+                        }else if(c == 72){
+                            document.getElementById(c).style.backgroundColor = "red";
+                            arrayColor.push(c);
+                            c = c - 12;
+                        }else if(c == 60){
+                            document.getElementById(c).style.backgroundColor = "red";
+                            arrayColor.push(c);
+                            c = c -10;
+                        }
+                        redCount -- ;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
