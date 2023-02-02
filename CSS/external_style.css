@@ -1,0 +1,11 @@
+h1{
+    color: yellow;
+    background-color: green;
+    font-size: 80px;
+    text-align: center;
+}
+p{
+    color: red;
+    background-color: aqua;
+    padding-left: 20px;
+}
