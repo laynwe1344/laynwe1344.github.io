@@ -59,7 +59,42 @@ a:visited{
     color: palevioletred;
     text-decoration: line-through;
 }
+/* target */
 p:target{
     color:green;
     border:1px solid red;
+}
+
+/* border */
+.borderone{
+    border: 5px dotted green;
+}
+.bordertwo{
+    border-top: 5px dashed;
+    border-bottom: 3px double;
+    border-color: aqua;
+}
+.borderstyle{
+    /* all four T,R,B,L */
+    border-style: dashed;
+    /* T&B,L&R */
+    border-style: dashed solid;
+    /* T,L&R,B */
+    border-style: solid double dashed;
+    /* T,R,B,L */
+    /* border-style: solid dashed dotted double; */
+    border-color: red green yellow;
+    border-width: 10px;
+}
+/* Margin */
+.margin{
+    /* all four */
+    /* margin: 100px; */
+    margin: 30px 50px 20px 50px;
+}
+.padding{
+    border: 5px solid green;
+    /* all four */
+    /* padding: 50px; */
+    padding: 50px 50px 50px 50px;
 }
