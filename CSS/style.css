@@ -4,9 +4,10 @@
 /* tag/element selector */
 h1{
     text-align: center;
-    background-color: blue;
+    /* background-color: blue; */
     /* width: 800px; */
     color: red;
+    /* width: 400px; */
     
 }
 
@@ -97,4 +98,49 @@ p:target{
     /* all four */
     /* padding: 50px; */
     padding: 50px 50px 50px 50px;
+}
+.inline{
+    color: red !important;
+    border: 1px green solid;
+    /* display-block */
+    display: block;
+    width: 200px;
+}
+.block{
+    color: blue;
+    border: 1px red solid;
+    width: 300px;
+}
+/* float */
+.float_left img{
+    width: 40%;
+    float: left;
+}
+.float_right img{
+    width: 30%;
+    float: right;
+}
+.float_right p{
+    padding-top: 20%;
+}
+.cle{
+    clear: left;
+}
+/* grid */
+.gridone div,.gridtwo div{
+    display: grid;
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+.gridone{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+.gridtwo{
+    display: grid;
+    grid-template-columns: 50% 30% 20%;
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
 }
