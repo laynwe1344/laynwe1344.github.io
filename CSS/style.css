@@ -148,11 +148,12 @@ p:target{
 /* apple */
 .apple{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 35% 35% 30%;
     grid-gap: 30px;
 }
 .apple img{
-    width: 260px;
+    width: 300px;
+    height: 300px;
     padding-top: 10px;
     padding-left: 15px;
     float: left;
@@ -161,13 +162,27 @@ p:target{
     padding-left: 15px;
     color: white;
     font-size: 30px;
+    font-family: oswold;
 }
 .apple h1{
     color: white;
-    text-align: left !important;
-    /* padding-left: 150px !important; */
+    font-size: 50px;
+    font-family: oswold;
 }
-
+#apple_h1{
+    font-size: 200px;
+}
+#i14{
+    height: 400px !important;
+}
+.description h1{
+    font-size:100px ;
+}
+.description p{
+    font-size: 40px;
+    padding-left: 10px;
+    font-family: oswold;
+}
 /* column add/row add */
 .coladd{
     grid-column-start: 1;
