@@ -292,7 +292,7 @@
     width: 100%;
     height: 200px;
 }
-.discuss div{
+.discuss_column{
     border: 1px solid rgb(233, 223, 223);
     border-radius: 5px
 }
@@ -321,4 +321,225 @@
     padding-left: 10px;
     font-family: popp;
     padding-right: 10px;
+}
+.news_image:hover{
+    transform: scale(1.5);
+}
+.image_hover{
+    overflow: hidden;
+    height: 200px;
+}
+.news_image{
+    transition: .8s ease 1s;
+}
+.footer{
+    display: grid;
+    grid-template-columns: auto 150px 150px auto;
+    margin-top: 50px;
+    margin-left: 80px;
+    font-family: popp;
+    background-color: rgb(50, 48, 48);
+    border: 1px solid gray;
+}
+.footer div a{
+    display: block;
+    text-decoration: none;
+    color: rgb(224, 224, 187);
+    padding-top: 20px;
+}
+.footer div{
+    margin-top: 20px;
+    color: rgb(224, 224, 187);
+}
+.first_a{
+    padding-left: 30px;
+}
+.footer h3{
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+.footer_icon{
+    padding-right: 20px;
+    padding-top: 20px;
+    display: block;
+}
+.footer_icon p{
+    padding-bottom: 10px;
+
+}
+.lorem{
+    padding-bottom: 20px;
+}
+.social_icon{
+    word-spacing: 10px;
+}
+
+/* about start */
+.about_img h1{
+    font-family: popp;
+    color: purple;
+    margin-left: 100px;
+}
+.about_img img{
+    width: 60%;
+    height: 300px;
+    float: right;
+    margin-right: 10px;
+}
+.about_text{
+    font-family: popp;
+    color: rgb(18, 17, 17);
+    margin-left: 50px;
+    /* border: 1px solid rgb(210, 204, 204); */
+    background-color: rgb(207, 201, 201);
+    margin-top: 50px;
+    width: 30%;
+    height:250px ;
+}
+.about_text p{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+.about_text h3{
+    text-align: center;
+    padding-top: 8px;
+}
+.about_text button{
+    border: 1px solid gray;
+    background-color: rgb(147, 56, 232);
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+}
+.about_text div{
+    padding-left: 50px;
+}
+.about_footer{
+    display: grid;
+    grid-template-columns: auto 150px 150px auto;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-family: popp;
+    background-color: rgb(50, 48, 48);
+    border: 1px solid gray;
+    margin-right: 20px;
+}
+.about_footer div a{
+    display: block;
+    text-decoration: none;
+    color: rgb(224, 224, 187);
+    padding-top: 20px;
+}
+.about_footer div{
+    margin-top: 20px;
+    color: rgb(224, 224, 187);
+}
+.first_a{
+    padding-left: 30px;
+}
+.about_footer h3{
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+.footer_icon{
+    padding-right: 20px;
+    padding-top: 20px;
+    display: block;
+}
+.footer_icon p{
+    padding-bottom: 10px;
+
+}
+.lorem{
+    padding-bottom: 20px;
+}
+.social_icon{
+    word-spacing: 10px;
+    
+}
+/* contact start */
+/* .contact_page{
+    width: 500px;
+    height: 500px;
+    border: 1px solid gray;
+} */
+.contact_img img{
+    width: 80%;
+    height: 500px;
+    margin-left: 50px;
+    opacity: 0.4;
+    position: relative;
+}
+.contact_us {
+    font-family: popp;
+    color: rgb(224, 224, 187);
+    position: absolute;
+    bottom: 80px;
+    left: 33%;
+    font-size: 40px;
+    border: 1px solid gray;
+    background-color: rgb(50, 48, 48);
+}
+.contact_icon {
+    color: black;
+    word-spacing: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 35%;
+}
+.contact_action{
+    font-family: popp;
+    border: 1px solid gray;
+    width: 80%;
+    height: 360px;
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+.contact_text{
+    padding-top: 20px;
+    padding-left: 20px;
+    line-height: 30px;
+    float: left;
+}
+.contact_text small{
+    padding-left: 30px;
+}
+/* .contact_text p{
+    padding-bottom: 10px;
+} */
+.contact_text .pone{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    color: black;
+}
+.contact_text h4{
+    text-align: center;
+}
+.contact_message{
+    padding-left: 20px;
+    /* border: 0.5px solid gray; */
+    float: right;
+    width:50% ;
+    height: 200px;
+    padding-top: 30px;
+}
+.contact_message input,label,textarea{
+    display: block;
+    width: 200px;
+    height: 30px;
+    /* line-height: 50px; */
+}
+.contact_message textarea{
+    height:70px !important;
+}
+.contact_message form{
+    padding-left: 40px !important;
+    padding-top: 10px;
+    
+}
+.contact_message button{
+    width: 60px;
+    height: 25px;
 }
