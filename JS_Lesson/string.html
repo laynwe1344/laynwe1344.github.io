@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Lesson</title>
+</head>
+<body>
+    <script>
+        let firstName="Student";
+        let lastName='Lay Lay Nwe';
+        let fullName=firstName + lastName;
+        console.log(fullName);
+        console.log(fullName.length);
+        console.log('My Name is ' + fullName);
+        console.log('<h1>'+firstName+'</h1><h1>'+lastName+'</h1>');
+        console.log(`My Name is ${firstName} .I am 23 Years.My nickname is ${lastName}`);
+        console.log(fullName.toUpperCase());
+        console.log(fullName.toLowerCase());
+        
+        let string = "My name is Lay Lay";
+        console.log(string.substr(11,7));
+        
+        let job="   Web    Developer    ";
+        console.log(job.trim());
+        
+        let ser="Javascript is funny";
+        console.log(ser.search('is'));
+        console.log(ser.indexOf('s'));
+
+        let rep='I wanna visit Yangon';
+        console.log(rep.replace('Yangon','Mandalay'));
+
+        let a='1,234,345';
+        let b=a.replace(/\,/g,'');
+        console.log(b);
+        console.log(typeof(b));
+
+        
+    </script>
+</body>
+</html>
