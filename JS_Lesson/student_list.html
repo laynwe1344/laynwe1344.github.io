@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<body>
+    <form name="myForm">
+        <label for="name">Name</label>
+        <input type="text" name="name"> <br>
+        <label for="age">Age</label>
+        <input type="number" name="age"> <br>
+        <label for="city">City</label>
+        <input type="text" name="city"> <br>
+        <button onclick="studentForm()" type="button">Register</button>
+    </form>
+    <br><br>
+
+    <table border="1" cellpadding="20" cellspacing="0">
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+    </table>
+
+    <script>
+        var studentListArray = [];
+        function studentForm(){
+            let name=document.myForm.name.value;
+            let age=document.myForm.age.value;
+            let city=document.myForm.city.value;
+            // alert('Ok');
+            // console.log(name,age,city);
+
+            let student_list = {
+                student_name: name,
+                student_age : age,
+                student_city : city,
+            }
+            // console.log(student_list);
+
+            studentListArray.push(student_list);
+            console.log(studentListArray);
+        }
+    </script>
+</body>
+</html>

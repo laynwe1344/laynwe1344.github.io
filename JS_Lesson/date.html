@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <h1>Date Function</h1>
+    <p id="time"></p>
+    <script>
+        let todayDate = new Date();
+        console.log(todayDate);
+        let fullYear = todayDate.getFullYear();
+        console.log(fullYear);
+        let fullMonth = todayDate.getMonth();
+        console.log(fullMonth);
+        let fullDay = todayDate.getDay();
+        console.log(fullDay);
+        let fullHour = todayDate.getHours();
+        console.log(fullHour);
+        let fullMinute = todayDate.getMinutes();
+        console.log(fullMinute);
+        let fullSecond = todayDate.getSeconds();
+        console.log(fullSecond);
+        let localTime = todayDate.toLocaleTimeString();
+        document.write(localTime);
+
+        function timeInterval(){
+            let date = new Date();
+            let second = date.getSeconds();
+            document.getElementById('time').innerHTML=second;
+        }
+        timeInterval();
+        setInterval(timeInterval,1000);
+    </script>
+</body>
+</html>

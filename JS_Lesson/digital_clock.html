@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        @font-face {
+            font-family: digital;
+            src: url(../JS_Lesson/static/StickNoBills-Bold.ttf);
+        }
+        #hour{
+            border: 3px solid;
+            background-color: black;
+            border-radius: 20px;
+            color: green;
+            width: 600px;
+            height: 200px;
+            text-align: center;
+            font-size: 100px;
+           box-shadow: 0px 10px 10px rgb(180, 175, 175);
+           margin-top: 10%;
+           margin-left: 30%;
+           padding-top: 50px;
+           position: relative;
+           font-family: digital;
+           /* text-shadow: 10px 0px 10px yellow; */
+        }
+        #part{
+            position: absolute;
+            right:25% ;
+            top: 15%;
+            color: green;
+            font-size: 50px;
+            font-family: digital;
+        }
+        #date{
+            position: absolute;
+            right:30% ;
+            top: 50%;
+            color: green;
+            font-size: 20px;
+            font-family: digital;
+        }
+    </style>
+</head>
+<body>
+    
+        <p id="hour"></p>
+        <p id="part"></p>
+        <p id="date"></p>
+    
+    <script>
+        function digitalClock(){
+            let date= new Date();
+            // document.getElementById('digital').innerHTML=date;
+            let hour=date.getHours();
+            let minute = date.getMinutes();
+            let second = date.getSeconds();
+            let day = date.getDate();
+            let month = date.getMonth();
+            let year = date.getFullYear();
+            let day2 = date.getDay();
+            if( day2 == 0){
+                var localDay = 'Sun';
+            }else if(day2 == 1){
+                var localDay = 'Mon';
+            }else if(day2 == 2){
+                var localDay = 'Tue';
+            }else if(day2 == 3){
+                var localDay = 'Wed';
+            }else if(day2 == 4){
+                var localDay = 'Thu';
+            }else if(day2 == 5){
+                var localDay = 'Fri';
+            }else{
+                var localDay = 'Sat';
+            }
+
+
+            if(month == 0){
+                var  localMonth = 'Jan';
+            }else if(month == 1){
+                var localMonth = 'Feb';
+            }else if(month == 2){
+                var localMonth = 'Mar';
+            }else if(month == 3){
+                var localMonth = 'April';
+            }else if(month == 4){
+                var localMonth = 'May';
+            }else if(month == 5){
+                var localMonth = 'Jun';
+            }else if(month == 6){
+                var localMonth = 'July';
+            }else if(month == 7){
+                var localMonth = 'Aug';
+            }else if(month == 8){
+                var localMonth = 'Set';
+            }else if(month == 9){
+                var localMonth = 'Oct';
+            }else if(month == 10){
+                var localMonth = 'Nov';
+            }else{
+                var localMonth = 'Dec';
+            }
+            if(hour > 12){
+                let localHour = hour - 12;
+               document.getElementById('hour').innerHTML = localHour + ' : ' + minute + ' : ' + second;
+               document.getElementById('part').innerHTML = "PM";
+               document.getElementById('date').innerHTML = localDay + ', ' + localMonth + ' ' +  day + ', '+ year;
+            }else{
+                document.getElementById('hour').innerHTML = hour + ' : ' + minute + ' : ' + second;
+                document.getElementById('part').innerHTML = "AM";
+                document.getElementById('date').innerHTML =  localDay + ', ' + localMonth + ' ' +  day + ', '+ year;
+            }
+        }
+        digitalClock();
+        setInterval(digitalClock,1000);
+    </script>
+</body>
+</html>
