@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Price</title>
+</head>
+<body>
+    <form action="" name="myForm">
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date"> <br>
+        <label for="item">Item</label>
+        <input type="text" name="item" id="item"> <br>
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price"> <br>
+    </form>
+    <br>
+
+    <table border="1" cellspacing="1" cellpadding="20">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Date</th>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td id="total" colspan="3"></td>
+                <td id="allTotal"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <br>
+
+    <button onclick="showTotal()" type="button">Show Total</button>
+
+    <script>
+        let data_array =[];
+        function showTotal(){
+            // alert('ok');
+            let date = document.myForm.date.value;
+            let item = document.myForm.item.value;
+            let price = document.myForm.price.value;
+            // console.log(date,item,price);
+
+            let data_list = {
+                data_date : date,
+                data_item : item,
+                date_price : price,
+            }
+            // console.log(data_list);
+
+            data_array.push(data_list);
+            // console.log(data_array);
+            calculateTotal();
+            
+        }
+        function calculateTotal(){
+            let list = '';
+            let total=0;
+            for(let i = 0 ; i < data_array.length ; i++){
+                let data_listObject = data_array[i];
+                total += parseInt(data_listObject.date_price);
+                list +=`
+                        <tr>
+                            <td>${i+1}</td>
+                            <td>${data_listObject.data_date}</td>
+                            <td>${data_listObject.data_item}</td>
+                            <td>${data_listObject.date_price}</td>
+                        </tr>
+                        `
+                          
+            }
+            document.getElementById('tbody').innerHTML = list;
+            document.getElementById('total').innerHTML = `Total`;
+            document.getElementById('allTotal').innerHTML = total;
+        }
+    </script>
+</body>
+</html>

@@ -18,13 +18,18 @@
     </form>
     <br><br>
 
-    <table border="1" cellpadding="20" cellspacing="0">
-        <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>City</th>
-        </tr>
+    <table border="1" cellpadding="20" cellspacing="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
     </table>
 
     <script>
@@ -44,7 +49,23 @@
             // console.log(student_list);
 
             studentListArray.push(student_list);
-            console.log(studentListArray);
+            // console.log(studentListArray);
+            student_data();
+        }
+        function student_data(){
+            let list = '';
+            for (let i = 0; i < studentListArray.length ; i++){
+                let student_listObject = studentListArray[i];
+                list += `
+                            <tr>
+                                <td>${i+1}</td>
+                                <td>${student_listObject.student_name}</td>
+                                <td>${student_listObject.student_age}</td>
+                                <td>${student_listObject.student_city}</td>
+                            </tr>
+                        `
+            }
+            document.getElementById('tbody').innerHTML = list;
         }
     </script>
 </body>
