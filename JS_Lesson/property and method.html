@@ -9,9 +9,15 @@
 <body>
     <h1>Property and Method</h1>
     <h2 id="createText"></h2>
+    <h3 id="myH3">Set Attribute Method</h3>
+    <p id="removeId" style="color:green; border:1px;background-color:yellow;">This is Remove Attribute Method</p>
+    <h3 id="testId" style="color: red;">Attribute color width JS</h3>
 
     <button onclick="createText()">Create Text Node</button>
     <button onclick="createElementLesson()">Create Element Node</button>
+    <button onclick="setAtt()">Set Attribute</button>
+    <button onclick="removeAtt()">Remove Attribute</button>
+    <button onclick="changeColor()">Change Color</button>
     <script>
         function createText(){
             // alert('ok');
@@ -30,6 +36,30 @@
            document.body.appendChild(h3);
 
         } 
+
+        function setAtt(){
+            let myh3 = document.getElementById('myH3');
+            myh3.setAttribute('style','color:red');
+        }
+
+        function removeAtt(){
+            let remove = document.getElementById('removeId');
+            console.log( remove.getAttribute('style'));
+            remove.removeAttribute('style');
+
+        }
+        function changeColor(){
+            let change  = document.getElementById('testId');
+            let colorName = change.getAttribute('style');
+            console.log(colorName);
+            if(colorName == "color:red"){
+                change.removeAttribute('style');
+                change.setAttribute('style','color:green');
+            }else{
+                change.removeAttribute('style');
+                change.setAttribute('style','color:red');
+            }
+        }
     </script>
 </body>
 </html>
