@@ -97,6 +97,7 @@
                     if(password==confirm){
                         return true;
                     }else{
+                        confirm_id.style.border='1px solid red';
                         document.getElementById('confirm_error').innerText='Password does not match';
                         document.getElementById('confirm_error').style.color='red';
                         return false;
